@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+textarea {
+    width: 50%;
+    height: 200px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: gray;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: not-allowed;
+    transition: background-color 0.2s;
+}
+
+button.active {
+    background-color: #555;
+    cursor: pointer;
+}
