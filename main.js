@@ -85,10 +85,10 @@ function convert(text) {
   converted = converted.replace(/(?<!ー)([ぁ-ん])(?=、)/g, match => toKatakana(match));
 
   // ⑤ 記号直前（。！？…〜など）のひらがな → カタカナ（伸ばし棒「ー」は除外）
-  converted = converted.replace(/(?<!ー)([ぁ-ん])(?=[。！？!?〜…・"”）)\]♪★～、 　])/g, match => toKatakana(match));
+  converted = converted.replace(/(?<!ー!?)([ぁ-ん])(?=[。！？!?〜…・"”）)\]♪★～、 　])/g, match => toKatakana(match));
 
   // ⑥ 文末（改行含む）のひらがな → カタカナ（伸ばし棒「ー」は除外）
-  converted = converted.replace(/(?<!ー)([ぁ-ん])($|\n)/g, (_, ch, nl) => toKatakana(ch) + nl);
+  converted = converted.replace(/(?<!ー!?)([ぁ-ん])($|\n)/g, (_, ch, nl) => toKatakana(ch) + nl);
 
   // ⑦ 伸ばし棒「ー」・波ダッシュ「〜」直前のひらがなはカタカナ化（文末・記号・空白直前のみ）
   // ただし、その後に文字が続く場合はカタカナ化しない
