@@ -14,9 +14,9 @@
   }
   
   .mode-switch button.active {
-    background: #0055cc;
+    background: #D90034;
     color: white;
-    border-color: #0044aa;
+    border-color: #D90034;
   }
   
   #shortInputsOutputs {
@@ -60,7 +60,7 @@
     transition: background-color 0.3s ease;
   }
   #shortModeArea button:hover:not(:disabled) {
-    background-color: #860016;
+    background-color: #D90034;
   }
   #shortModeArea button:disabled {
     background-color: #ccc;
@@ -93,7 +93,7 @@
   }
   
   #longModeArea button:hover:not(:disabled) {
-    background-color: #860016;
+    background-color: #D90034;
   }
   
   #longModeArea button:disabled {
