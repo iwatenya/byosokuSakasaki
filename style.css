@@ -14,9 +14,9 @@
   }
   
   .mode-switch button.active {
-    background: #D90034;
+    background: #00608D;
     color: white;
-    border-color: #D90034;
+    border-color: #00608D;
   }
   
   #shortInputsOutputs {
