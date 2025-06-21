@@ -1,27 +1,113 @@
-body {
-    font-family: sans-serif;
-    padding: 20px;
-}
-
-textarea {
-    width: 50%;
-    height: 200px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: gray;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: not-allowed;
-    transition: background-color 0.2s;
-}
-
-button.active {
-    background-color: #555;
+.mode-switch {
+    margin-bottom: 12px;
+  }
+  
+  .mode-switch button {
+    padding: 6px 12px;
+    margin-right: 6px;
+    font-weight: bold;
     cursor: pointer;
-}
+    border: 1px solid #ccc;
+    background: #eee;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .mode-switch button.active {
+    background: #0055cc;
+    color: white;
+    border-color: #0044aa;
+  }
+  
+  #shortInputsOutputs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+  
+  #shortInputsOutputs > div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+  
+  #shortInputsOutputs input[type="text"] {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 14px;
+    min-width: 0; /* これでflex時に縮み過ぎ防止 */
+  }
+  
+  #shortInputsOutputs textarea {
+    flex: 1;
+    resize: vertical;
+    padding: 6px 8px;
+    font-size: 14px;
+    min-height: 24px;
+    min-width: 0;
+  }
+
+  #shortModeArea button {
+    padding: 10px 20px;   /* ボタンの内側の余白を大きく */
+    margin-top:15px; 
+    font-size: 18px;      /* 文字サイズを大きく */
+    border-radius: 4px;   /* 角丸も少し大きめにしても良い */
+    cursor: pointer;
+    background-color: #7c7c7c;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  #shortModeArea button:hover:not(:disabled) {
+    background-color: #860016;
+  }
+  #shortModeArea button:disabled {
+    background-color: #ccc;
+    cursor: default;
+  }
+  
+  /* 長文モードのtextarea調整 */
+  #longModeArea textarea {
+    width: 640px;     
+    height: 156px;    
+    font-size: 16px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  /* 長文モードの変換ボタンの余裕 */
+  #longModeArea button {
+    /* margin-top: 16px; */
+    margin-bottom: 18px; 
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #7c7c7c;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  #longModeArea button:hover:not(:disabled) {
+    background-color: #860016;
+  }
+  
+  #longModeArea button:disabled {
+    background-color: #ccc;
+    cursor: default;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+  button.active {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
