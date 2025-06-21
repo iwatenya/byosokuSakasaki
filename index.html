@@ -2,21 +2,37 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
-    <title>秒速逆先夏目</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>カタカナ変換ツール</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
     <h2>秒速逆●夏目</h2>
+    <p>不完全な部分は変換後の文を手動で修正してくださイ。</p>
+    <!-- モード切替ボタン -->
+    <div id="modeSwitch" class="mode-switch">
+        <button id="longModeBtn" class="active">長文モード</button>
+        <button id="shortModeBtn">短文モード</button>
+    </div>
 
-    <textarea id="inputText" placeholder="文章を入力してネ"></textarea>
-    <br>
-    <button id="convertBtn" disabled>さァ、魔法をかけてあげよウ……♪</button>
-    <br><br>
-    <textarea id="outputText" placeholder="どんな魔法がかかるかナ？"></textarea>
+    <!-- 長文モードエリア -->
+    <div id="longModeArea">
+        <textarea id="inputText" rows="6" cols="50" placeholder="文章を入力してネ"></textarea><br />
+        <button id="convertBtn" disabled>さァ、魔法をかけてあげよウ……♪</button><br />
+        <textarea id="outputText" rows="6" cols="50" placeholder="変換後の文章が表示されるヨ(編集可)"></textarea>
+    </div>
+
+    <!-- 短文モードエリア（初期非表示） -->
+    <div id="shortModeArea" style="display:none;">
+        <div id="shortInputsOutputs"></div>
+        <button id="batchConvertBtn" disabled>まとめて魔法をかけるネ</button>
+    </div>
+
+
+
+
+    <p>作成者→X(旧Twitter)：@chumuchumun</p>
 
     <script src="main.js"></script>
 </body>
